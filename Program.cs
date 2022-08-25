@@ -1,6 +1,6 @@
 ﻿// Задача 46:
 
-Console.WriteLine("Колво строк: ");
+/*Console.WriteLine("Колво строк: ");
 int rows = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Колво столбцов: ");
 int colums = Convert.ToInt32(Console.ReadLine());
@@ -29,4 +29,56 @@ void PrintArray(int [,] inputMatrix)
         Console.WriteLine();
     }
 }
-PrintArray(result);
+PrintArray(result);*/
+
+
+/*Console.WriteLine("Колво строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Колво столбцов: ");
+int colums = Convert.ToInt32(Console.ReadLine());
+int[,] matrix = new int[rows, colums];
+for (int i = 0; i < rows; i++)
+{
+    for (int j = 0; j < colums; j++)
+    {
+        matrix[i, j] = i + j;
+        Console.Write(matrix[i,j] + "\t");
+    }
+    Console.WriteLine();
+}*/
+
+
+Console.WriteLine("Колво строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Колво столбцов: ");
+int colums = Convert.ToInt32(Console.ReadLine());
+double[,] matrix = new double[rows, colums];
+for (int i = 0; i < rows; i++)
+{
+    for (int j = 0; j < colums; j++)
+    {
+        matrix[i, j] = new Random().Next(100);
+        if(i % 2 == 0 && j % 2 ==  0) matrix[i, j] = Math.Pow(matrix[i, j], 2);
+        Console.Write(matrix[i,j] + "\t");
+    }
+    Console.WriteLine();
+}
+
+
+/*Console.WriteLine("Колво строк: ");
+int rows = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("Колво столбцов: ");
+int colums = Convert.ToInt32(Console.ReadLine());
+int[,] matrix = new int[rows, colums];
+int summ = 0;
+for (int i = 0; i < rows; i++)
+{
+    for (int j = 0; j < colums; j++)
+    {
+        matrix[i, j] = new Random().Next(10);
+        if(i == j) summ += matrix[i, j];
+        Console.Write(matrix[i,j] + "\t");
+    }
+    Console.WriteLine(" ");
+}
+Console.WriteLine($"Сумма элементов главной диагонали: {summ}");*/
